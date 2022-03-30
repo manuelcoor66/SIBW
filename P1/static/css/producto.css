@@ -1,0 +1,152 @@
+/* Configuración del color de toda la página */
+body{
+    background-color: rgb(18, 30, 56);
+}
+
+a{
+    color: black;
+}
+
+
+/* Configuración de la cabecera de la página */
+.header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* Configuración del logo de la cabecera */
+.logo{
+    text-align: center;
+    height: auto;
+    width: 40%;
+    padding: 5px;
+}
+
+/* Configuración del contenedor de la cabecera que contiene el título y el menú */
+.container-title-menu{
+    float: left;
+    width: 65%;
+    height: auto;
+    background-color: rgb(201, 245, 230);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+/* Configuración del título del contenedor cabecera */
+.title{
+    font-size: 150%;
+    float: right;
+    width: 95%;
+    height: 30%;
+    text-align: center;
+    color: brown;
+}
+
+/* Configuración del eslogan del contenedor cabecera */
+.slogan{
+    font-size: 150%;
+    float: right;
+    width: 95%;
+    height: 40%;
+    text-align: center;
+    color: brown;
+}
+
+/* Configuración del menú del contenedor cabecera */
+.menu{
+    font-size: 150%;
+    float: right;
+    width: 95%;
+    height: 30%;
+    text-align: center;
+}
+
+
+/* Configuración del contenedor principal que contiene las fotos y los elementos auxilares */
+.container-principal{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+}
+
+/* Configuración del contenedor que tiene las fotos del contenedor principal*/
+.container-producto{
+    text-align: center;
+    width: 70%;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: justify;
+    background-color: rgb(201, 245, 230);
+    display: flex;
+}
+
+.subrayar{
+    text-decoration: underline;
+} 
+
+.botones-sociales{
+    text-align: center;
+}
+
+.texto-producto{
+    width: 50%;
+    height: auto;
+}
+
+.fotos-producto{
+    width: 50%;
+    height: auto;
+    text-align: center;
+}
+
+
+/* Configuración del lateral que contiene los enlaces de interés del contenedor principal*/
+.lateral{
+    float: right;
+    font-size: 150%;
+    width: 25%;
+    height: auto;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: rgb(201, 245, 230);
+}
+
+.titulo-lateral {
+    font-size: 125%;
+    text-align: center;
+}
+
+.foto-lateral1{
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+.foto-lateral2{
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+.foto-lateral3{
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+.foto-lateral4{
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+/* Configuración del contenedor que tiene el pie de la página */
+.pie {
+    float: inline-end;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
