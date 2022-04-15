@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+    <head>
+        <title>Bullpadel Hack 03 2022</title>
+        <!-- Ruta relativa del fichero de style (style.css) -->
+        <link rel="stylesheet" type="text/css" href="static/css/producto.css">
+    </head>
+
+
+    <body>
+        <!-- Bloque cabecera -->
+        <div class="header"> <!-- Otra opción habrái sido poner header -->
+            <!-- Contenedor logo de la cabecera -->
+            <div class="logo">
+                <img src="static/imagen/logo.png"/>
+            <!-- Fin cntenedor logo de la cabecera -->
+            </div>
+
+            <!-- Contenedor title-menu de la cabecera -->
+            <div class="container-title-menu">
+                <!-- Contenedor title de title-menu -->
+                <div class="title">
+                    <h1>Padel Granada</h1>
+                <!-- Fin contenedor title de title-menu -->
+                </div>
+
+                <!-- Contenedor slogan de title-menu -->
+                <div class="slogan">
+                    <h2>Tu tienda de pádel</h2>
+                <!-- Fin contendor slogan de title-menu -->
+                </div>
+                
+                <!-- Contenedor menu de title-menu -->
+                <div class="menu">
+                    <nav>
+                        <a href="portada.html"> Página principal</a> |               
+                        <a href="producto.html"> Hack 03</a> |
+                        <a href="producto-imprimir.html"> Imprimir</a>
+                    </nav>
+                <!-- Fin contenedor menu de title-menu -->
+                </div>
+            <!-- Fin contenedor title-menu de la cabecera -->
+            </div>
+        <!-- Fin bloque cabecera -->
+        </div>
+    </body>
+
+    <body>
+    <!-- Parte central-->
+        <section class="container-principal">
+            <!-- Bloque fotos del  contenedor principal-->
+            <div class="container-producto">
+                <div class="todo-producto">
+                    <!-- Parte de texto del contenedor principal -->
+                    <div class="texto-producto">
+                        <h1>Bullpadel Hack 03 2022</h1>
+                        <h2>Precio de venta: 324,95€</h2>
+                        <p>
+                            Esta pala, que es la misma que usa el conocido jugador Paquito Navarro es una de las mejores opciones entre las palas existentes actualmente.
+                        </p>                    
+                        <p>
+                            La pala Bullpadel 03 2022 tiene una forma de diamante con un balance alto y un punto dulce amplio, la cual la convierte en una pala polibalente 
+                            perfecta para todo tipo de jugadores, aunque es mejor para jugadores que buscan una gran potencia en su golpeo.
+                        </p>
+                        <h2 class="subrayar">
+                            Tipo de jugador al que se le recomienda:
+                        </h2>
+                        <p>
+                            La pala está pensada para que el jugador pueda sacar su máxima potencia, ya sean jugadores con un caracter ofensivo o defensivo con un nivel 
+                            avanzado o profesional, por lo que se adapta a todas las partes de la pista y del juego del jugador.
+                            El juego desde el fondo de pista está garantizado gracias a su gran punto dulce, aunque requiere un cierto nivel y precisión para poder sacarle 
+                            todo su potencial a la pala. Esta pala también sirve para el juego de volea cerca de la red, ya que tiene un gran control que permite el juego de voleas
+                            para realizar el ataque. Por último, también permite un gran golpeo para sacarla por 3 o por 4 gracias al balance alto, la forma de diamante y al punto 
+                            dulce.
+                        </p>
+                        <h2 class="subrayar">
+                            Características:
+                        </h2>
+                        <p>
+                            Esta pala cuenta con una forma de diamante y un balance alto, un peso de 365-375 gramos (sin añadidos como nuevos grips o balanceadores de pesos) y cuenta con 
+                            un novedoso sistema de Air React Channel (que da un marco más aerodinámico con mejor rigidez, firmeza y ligereza) y el nuevo núcleo TriCarbon (ofrece mejores 
+                            resultados en temas de potencia y control) 100% carbono, entro otras tecnologías existentes. Entre las otras tecnologías existentes destacamos la tecnología 
+                            Vibradrive, el corazón Hack, en los laterales los canalaes Nerve y el novedoso sistema Adapta de las gamas Hack de Bullpadel.
+                            El marco y la cara están hechas de carbono 12k (12.000 hilos por cada franja).
+                        </p>     
+                        <a href="https://www.padelnuestro.com/bullpadel-hack-03-2022-p-27095.html">Pulse aquí para obtener más información.</a>           
+
+                    <!-- Fin parte de texto del contenedor principal -->
+                    </div>
+                    <div class="fotos-producto">
+                        <img src="static/imagen/foto1.png"/>
+                        <img src="static/imagen/foto-texto1.png"/>
+                        <img src="static/imagen/foto-texto2.png"/>
+                    </div>
+                </div>
+
+                <div class="boton"><button class="boton-comentarios" type="button" id="boton-comentarios">Comentarios</button></div>
+                
+                <div class="subir-comentarios" id="subir-comentarios">
+                    <form>
+                        <div><label for="Nombre">Nombre</label><br>
+                        <input type="text1" id="boton-nombre" placeholder="Introducir nombre"></div>
+                        <div><label for="Email">Correo</label><br>
+                        <input type="text2" id="boton-correo" placeholder="Introducir correo"></div>
+                        <div><label for="Comentario">Comentarios</label><br>
+                        <textarea type="text3" id="boton-comentario" onkeyup="censurar_palabras()" placeholder="Introducir comentario"></textarea></div>
+                        <div>
+                        <button class="boton-subir" type="button" id="boton-subir">Subir</button>
+                        </div>
+                    </form>
+
+                    <div class="nuevo-comentario"></div>
+
+                    <div class="comentarios" id ="comentarios">
+                        <div class="comentario">
+                            <div class="subrayar" id="subrayar"><span class="coment" id="coment">Comentario:</span></div>                        
+                            <p class="nombre" id="nombre">Manuel Contreras Doña <span class="fecha" id="fecha">20/03/2022 17:46</span></p>
+                            <p class="texto">
+                                Me compré esta pala porque quería mejorar dentro de mi juego en la pegada, y la verdad es que me ayudó mucho para sacarla por 3, por 4 y traérmela. 
+                                Por tanto, como acabé super contento con la pala, la recomiendo bastante para jugadores cuyo estilo de juego sea muy ofensivo y pegador, porque la
+                                pala no es tan buena para jugadores que prefieren el control a la pegada.
+                            </p>
+                        </div>
+
+                        <div class="comentario">
+                            <div class="subrayar" id="subrayar"><span>Comentario:</span></div>
+                            <p class="nombre">Paloma Orge Gallegos <span class="fecha" id="fecha">17/02/2022 09:34</span></p>
+                            <p class="texto">
+                                Estoy empezando a jugar al pádel, y me compré esta pala porque se la ví a un jugador profesional y me gustó mucho la estética; pero no me ha gustado
+                                mucho, ya que es muy complicado acostumbrarse a ella, ya que la pelota sale mucho y a veces es demasiado complicada de controlarla. Debí de haberme 
+                                mirado las recomendaciones y pillarme una pala más indicada para principiantes como yo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <script src="static/js/producto.js"></script>
+                </div>
+            <!-- Fin bloque fotos del contenedor principal -->
+            </div>            
+        
+            <!-- Bloque lateral del principal -->
+            <aside class="lateral">
+                <div class="titulo-lateral">
+                    <h1>Enlaces de interés:</h1>
+                </div>
+                <ul>
+                    <!-- Primer enlace lateral -->
+                    <div class="foto-lateral1">
+                        <img src="static/imagen/foto-lateral1.jpg"/>
+                        <li><a href="https://www.padelot.com/blog/mejores-palas-padel-calidad-precio-2022/"> Mejores palas calidad-precio.</a></li>
+                    </div>
+
+                    <!-- Segundo enlace lateral -->
+                    <div class="foto-lateral2">
+                        <img src="static/imagen/foto-lateral2.jpg"/>
+                        <li><a href="https://www.padeliberico.es/blog-padeliberico/elegir-una-pala-padel-forma-correcta-acierta-comprando/">Como elegir tu pala de padel.</a></li>
+                    </div>
+
+                    <!-- Tercer enlace lateral -->
+                    <div class="foto-lateral3">
+                        <img src="static/imagen/foto-lateral3.jpg"/>
+                        <li><a href="https://www.padeladdict.com/alejandro-ruiz-nos-cuenta-como-poner-un-grip/">Como poner el grip de mi pala.</a></li>
+                    </div>
+                    
+                    <!-- Cuarto enlace lateral -->
+                    <div class="foto-lateral4">
+                        <img src="static/imagen/foto-lateral4.jpg"/>
+                        <li><a href="http://padelgrip.com/palas-de-padel/palas-de-padel-rugosas/"> ¿Las palas rugosas sirven?</a></li>
+                    </div>
+                </ul>
+            <!-- Fin Bloque lateral -->
+            </aside>
+        <!-- Fin parte central -->
+        </section>
+    </body>
+    
+    
+    <!-- Bloque pie de página -->
+    <footer class="pie">
+            @Copyright 2022-Manuel Contreras Orge manuelcoor66@correo.ugr.es
+            &nbsp;&nbsp;&nbsp;
+            <!-- Botones sociales y enlaces del contenedor principal-->
+            <a href="https://twitter.com"><button>Twitter</button></a>          
+            &nbsp;  
+            <a href="https://facebook.com"><button>Facebook</button></a>   
+            &nbsp;         
+            <a href="producto-imprimir.html"><button>Imprimir</button></a>
+            <!-- Fin botones sociales y enlaces del contenedor principal-->
+    </footer>
+    <!-- Fin Bloque pie de página -->
+</html>
