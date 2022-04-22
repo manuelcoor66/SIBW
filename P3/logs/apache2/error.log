@@ -1,0 +1,6 @@
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+[Tue Apr 19 16:00:32.787168 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Tue Apr 19 16:00:32.787369 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Apr 19 16:07:31.816344 2022] [php7:error] [pid 18] [client 172.18.0.1:54574] script '/var/www/html/evento.php' not found or unable to stat
+[Tue Apr 19 16:11:20.774398 2022] [php7:error] [pid 19] [client 172.18.0.1:54576] script '/var/www/html/evento.php' not found or unable to stat
+[Tue Apr 19 16:11:29.338089 2022] [php7:error] [pid 20] [client 172.18.0.1:54578] script '/var/www/html/evento.php' not found or unable to stat

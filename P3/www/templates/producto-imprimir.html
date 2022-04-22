@@ -1,0 +1,35 @@
+{% extends "portada.html" %}
+
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="../static/css/producto-imprimir.css">
+{% endblock %}
+
+
+{% block central %}
+<!-- Bloque fotos del  contenedor principal-->
+<div class="container-producto">
+	<div class="todo-producto">
+		<!-- Parte de texto del contenedor principal -->
+		<div class="texto-producto">
+			<h1>{{ pala['nombre'] }}</h1>
+			<h2>Precio de venta: {{ pala['precio'] }}€</h2>
+			<p>{{ pala['descripcion'] }}</p>
+			<h2 class="subrayar">
+				Tipo de jugador al que se le recomienda:
+			</h2>
+			<p>{{ pala['tipo_jugador'] }}</p>
+			<h2 class="subrayar">
+				Características:
+			</h2>
+			<p>{{ pala['caracteristicas'] }}</p>  
+			<a href={{ pala['enlace'] }}>Pulse aquí para obtener más información.</a>          
+		</div>
+		
+		<div class="fotos-producto">
+                <img src="{{ pala['foto1'] }}"/>
+                <img src="{{ pala['foto2'] }}"/>
+                <img src="{{ pala['foto3'] }}"/>
+       	</div>
+	</div>
+</div>
+{% endblock %}
