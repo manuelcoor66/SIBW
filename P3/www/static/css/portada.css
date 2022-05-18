@@ -17,11 +17,22 @@ a{
     display: flex;
 }
 
+/* Configuración de inicialización de usuarios */
+.prueba1{
+    float:right;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
 /* Configuración del logo de la cabecera */
 .logo{
     text-align: center;
     height: auto;
-    width: 40%;
+    max-width: 40%;
     padding: 5px;
 }
 
@@ -229,4 +240,5 @@ a{
     text-align: center;
     color: white;
     background-color: black;
+    padding-bottom: 20px;
 }

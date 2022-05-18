@@ -9,6 +9,11 @@ a{
     color: black;
 }
 
+/* Configuración de inicialización de usuarios */
+.prueba1{
+    display: none;
+}
+
 /* Configuración del logo de la cabecera */
 .logo{
     max-width: 65%;

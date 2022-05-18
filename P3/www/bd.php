@@ -1,6 +1,6 @@
 <?php 
 	function connect() {
-		$mysqli = new mysqli("mysql", "manuelcoor66", "manuelcoor66", "Practica3");
+		$mysqli = new mysqli("mysql", "manuelcoor66", "manuelcoor66", "P4");
 		if ($mysqli->connect_errno) {
 			echo ("Fallo al conectar: " . $mysqli->connect_error);
 		}
@@ -12,7 +12,7 @@
 
 		$res = $mysqli->query("SELECT nombre, precio, descripcion, tipo_jugador, caracteristicas, enlace, foto1, foto2, foto3, nombre_comentario, fecha_comentario, texto_comentario FROM Productos WHERE id=" . $idPala);
 
-		$pala = array('nombre' => 'nombre por defecto', 'precio' => 'precio por defecto', 'descripcion' => 'descripcion por defecto', 'tipo_jugador' => 'tipo_jugador por defecto', 'caracteristicas' => 'caracteristicas por defecto', 'enlace' => 'enlace por defecto', 'foto1' => 'foto1 por defecto', 'foto2' => 'foto2 por defecto', 'foto3' => 'foto3 por defecto', 'nombre_comentario' => 'nombre_comentario por defecto', 'fecha_comentario' => 'fecha_comentario por defecto', 'texto_comentario' => 'texto_comentario por defecto');
+		$pala = array('nombre' => 'nombre por defecto', 'precio' => 'precio por defecto', 'descripcion' => 'descripcion por defecto', 'tipo_jugador' => 'tipo_jugador por defecto', 'caracteristicas' => 'caracteristicas por defecto', 'enlace' => 'enlace por defecto', 'foto1' => 'foto1 por defecto', 'foto2' => 'foto2 por defecto', 'foto3' => 'foto3 por defecto', 'nombre_comentario' => 'nombre_comentario por defecto', 'fecha_comentario' => 'fecha_comentario por defecto', 'texto_comentario' => 'texto_comentario por defecto', 'idPala' => 'idPala por defecto');
 
 		if ($res->num_rows > 0) {
 			$row = $res->fetch_assoc();
