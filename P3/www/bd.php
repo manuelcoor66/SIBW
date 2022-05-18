@@ -1,9 +1,14 @@
-<?php    
-	function getPala($idPala) {
+<?php 
+	function connect() {
 		$mysqli = new mysqli("mysql", "manuelcoor66", "manuelcoor66", "Practica3");
 		if ($mysqli->connect_errno) {
 			echo ("Fallo al conectar: " . $mysqli->connect_error);
 		}
+		return $mysqli;
+	}	
+	   
+	function getPala($idPala) {
+		$mysqli = connect();
 
 		$res = $mysqli->query("SELECT nombre, precio, descripcion, tipo_jugador, caracteristicas, enlace, foto1, foto2, foto3, nombre_comentario, fecha_comentario, texto_comentario FROM Productos WHERE id=" . $idPala);
 
@@ -19,17 +24,14 @@
 	}
   
 	function getPalabras() {
-		$mysqli = new mysqli("mysql", "manuelcoor66", "manuelcoor66", "Practica3");
-		if ($mysqli->connect_errno) {
-			echo ("Fallo al conectar: " . $mysqli->connect_error);
-		}
+		$mysqli = connect();
 		
 		$res = $mysqli->query("SELECT palabra FROM Palabras_Prohibidas");
-		$palabras = array('censurada' => 'censurada por defecto');
-
+               $palabras=array();
+               
 		if ($res->num_rows > 0) {
 			while($row = $res->fetch_assoc()) {
-				$palabras[] = array('censurada' => $row['palabra']);
+				$palabras[] = $row['palabra'];
 			}
 		}
 

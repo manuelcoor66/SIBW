@@ -1,4 +1,6 @@
 var comments = document.getElementById("boton-comentarios");
+var banned_words;
+
 comments.addEventListener("click", function(){
     var comentarios = document.getElementById("subir-comentarios");
 
@@ -68,10 +70,7 @@ function palabras_censuradas(){
 	
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
-		    banned_json = JSON.parse(this.responseText);
-		    for(var obj of banned_json) {
-		        banned_words.push(obj["banned"]);
-		    }
+		    banned_words = JSON.parse(this.responseText);
 		}
     };
 
@@ -81,7 +80,7 @@ function palabras_censuradas(){
 
 function censurar_palabras(){
     var palabra = document.getElementById("boton-comentario");
-    var censuradas = palabras_censuradas();
+    var censuradas = banned_words;
     
     for (var cambio of censuradas) {
         palabra.value = palabra.value.replace(cambio, "*".repeat(cambio.length));
@@ -104,3 +103,5 @@ function validarEmail(valor) {
         return(false);
     }
 }
+
+palabras_censuradas();
