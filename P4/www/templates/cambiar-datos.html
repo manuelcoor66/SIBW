@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Login/registro de usuario</title>
+    <!-- Ruta relativa del fichero de style (style.css) -->
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="../static/css/cambiar-datos.css">
+    {% endblock %}
+  </head>
+  
+  <body>
+    <div class="parte-central">
+      <div class="titulo">
+          <h1>
+              Cambiar datos
+          </h1>
+      </div>
+
+      <div class="datos_cambiar">
+        <form action="login.php" method="post">
+          <div class="cambiar_un_dato"><label for="Nombre">Nombre</label><br>
+          <input type="text" name="nick" placeholder="Introducir Nombre"/><br>
+
+          <div class="cambiar_un_dato"><label for="Apellidos">Apellidos</label><br>
+          <input type="text" name="contraseña" placeholder="Introducir Apellidos"/><br>
+
+          <div class="cambiar_un_dato"><label for="Email">Email</label><br>
+          <input type="text" name="nick" placeholder="Introducir Email"/><br>
+
+          <div class="cambiar_un_dato"><label for="Usuario">Usuario</label><br>
+          <input type="text" name="contraseña" placeholder="Introducir Usuario"/><br>
+
+          <div class="cambiar_un_dato"><label for="Contraseña">Contraseña</label><br>
+          <input type="password" name="contraseña" placeholder="Introducir Contraseña"/><br>
+          
+            <div class="boton_cambiar">
+            <input type="submit" value="iniciar sesión" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

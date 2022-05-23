@@ -1,0 +1,11 @@
+// TIPOS DE USUARIOS DE portada.html y producto.html
+
+{ % if user.Tipo_usuario.0 %}
+    <p>Tipo de usuario: registrado</p>
+{% if else user.Tipo_usuario.1 %}
+    <p>Tipo de usuario: moderador</p>
+{% if else user.Tipo_usuario.2 %}
+    <p>Tipo de usuario: gestor</p>
+{% if else user.Tipo_usuario.3 %}
+    <p>Tipo de usuario: superusuario</p>
+{% endif %}

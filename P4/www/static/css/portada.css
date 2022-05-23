@@ -1,0 +1,279 @@
+/* Configuración del color de fondo de toda la página */
+body{
+    background-color: rgb(105, 149, 245);
+}
+
+/* Configuración del color de los textos de toda la página */
+a{
+    color: black;
+}
+
+
+
+/* Configuración de la cabecera de la página */
+.header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* Configuración de inicialización de usuarios */
+.usuarios{
+    float:left;
+    width: 101%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+/* Configuración de inicialización de usuarios */
+.texto-usuario{
+    float:left;
+    width: 15%;
+    height: auto;
+    text-align: center;
+}
+
+.tipo-usuario{
+    float:left;
+    width: 25%;
+    height: auto;
+    text-align: center;
+}
+
+.boton-datos{
+    float:right;
+    width: 15%;
+    height: auto;
+    text-align: center;
+    padding-top: 15px;
+}
+
+/* Configuración de inicialización de usuarios */
+.boton-usuario{
+    float:right;
+    width: 10%;
+    height: auto;
+    text-align: center;
+    padding-top: 15px;
+}
+
+/* Configuración del logo de la cabecera */
+.logo{
+    text-align: center;
+    height: auto;
+    width: 40%;
+    padding: 5px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* Configuración del contenedor de la cabecera que contiene el título y el menú */
+.container-title-menu{
+    float: left;
+    width: 65%;
+    height: auto;
+    background-color: rgb(201, 245, 230);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+/* Configuración del título del contenedor cabecera */
+.title{
+    font-size: 150%;
+    float: right;
+    width: 95%;
+    height: 30%;
+    text-align: center;
+    color: brown;
+}
+
+/* Configuración del eslogan del contenedor cabecera */
+.slogan{
+    font-size: 150%;
+    float: right;
+    width: 95%;
+    height: 40%;
+    text-align: center;
+    color: brown;
+}
+
+/* Configuración del menú del contenedor cabecera */
+.menu{
+    font-size: 150%;
+    float: right;
+    width: 95%;
+    height: 30%;
+    text-align: center;
+    color: black;
+}
+
+
+/* Configuración del contenedor principal que contiene las fotos y los elementos auxilares */
+.container-principal{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+}
+
+/* Configuración del contenedor que tiene las fotos del contenedor principal*/
+.fotos{
+    width: 70%;
+    height: auto;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    text-align: justify;
+    display: inline-table;
+    background-color: rgb(201, 245, 230);
+}
+
+/* Configuración del primer contenedor de fotos */
+.grupo1{
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 10px;
+}
+
+/* Configuración de las fotos */
+.foto1{
+    font-size: 150%;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+.foto2{
+    font-size: 150%;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.foto3{
+    font-size: 150%;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+/* Configuración del segundo contenedor de fotos */
+.grupo2{
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 10px;
+}
+
+/* Configuración de la cuarta foto */
+.foto4{
+    font-size: 150%;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.foto5{
+    font-size: 150%;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.foto6{
+    font-size: 150%;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+/* Configuración del tercer contenedor de fotos */
+.grupo3{
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 10px;
+}
+
+/* Configuración de la septima foto */
+.foto7{
+    font-size: 150%;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.foto8{
+    font-size: 150%;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.foto9{
+    font-size: 150%;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Configuración del lateral que contiene los enlaces de interés del contenedor principal*/
+.lateral{
+    float: right;
+    font-size: 150%;
+    width: 30%;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: rgb(201, 245, 230);
+    color: black;
+}
+
+.titulo-lateral {
+    font-size: 125%;
+    text-align: center;
+}
+
+.foto-lateral1{
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+.foto-lateral2{
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+.foto-lateral3{
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+.foto-lateral4{
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+
+
+/* Configuración del contenedor que tiene el pie de la página */
+.pie {
+    float: right;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding-bottom: 20px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <head>	
+        <title>Iniciar sesión/registrarse</title>
+        <!-- Ruta relativa del fichero de style (style.css) -->
+        {% block css %}
+        <link rel="stylesheet" type="text/css" href="../static/css/usuarios.css">
+        {% endblock %}
+    </head>
+
+    <body>
+        <div class="parte-central">
+            <div class="titulo">
+                <h1>
+                    Registrarse
+                </h1>
+            </div>
+
+            <div class="datos_registar">
+                <div class="registrar_un_dato"><label for="Nombre">Nombre</label><br>
+                <input type="text1" id="boton-nombre" placeholder="Introducir nombre"></div>
+                <div class="registrar_un_dato"><label for="Email">Apellidos</label><br>
+                <input type="text2" id="boton-apellidos" placeholder="Introducir apellidos"></div>
+                <div class="registrar_un_dato"><label for="Email">Correo</label><br>
+                <input type="text2" id="boton-correo" placeholder="Introducir correo"></div>
+                <div class="registrar_un_dato"><label for="Usuario">Usuario</label><br>
+                <input type="text1" id="boton-usuario" placeholder="Introducir usuario"></div>
+                <div class="registrar_un_dato"><label for="Email">Contraseña</label><br>
+                <input type="text2" id="boton-contraseña" placeholder="Introducir contraseña"></div>
+            </div>
+
+            <div class="boton_registrar">
+                <button class="registrarse">Registrarse</button>
+            </div>
+        </div>
+    </body>
+</html>   

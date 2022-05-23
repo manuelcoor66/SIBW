@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Login/registro de usuario</title>
+    <!-- Ruta relativa del fichero de style (style.css) -->
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="../static/css/login.css">
+    {% endblock %}
+  </head>
+  
+  <body>
+    <div class="parte-central">
+      <div class="titulo">
+          <h1>
+              Iniciar sesión
+          </h1>
+      </div>
+
+      <div class="datos_iniciar">
+        <form action="login.php" method="POST">
+          <div class="iniciar_un_dato"><label for="Usuario">Usuario</label><br>
+          <input type="text" name="nick" placeholder="Introducir usuario"/><br>
+
+          <div class="iniciar_un_dato"><label for="Contraseña">Contraseña</label><br>
+          <input type="password" name="contraseña" placeholder="Introducir contraseña"/><br>
+
+          <div class="boton_iniciar">
+            <input type="submit" value="iniciar sesión" />
+          </div>
+        </form>
+
+          <div class="ir_registro">
+            <p>Si no está registrado pulse <a href="http://localhost/usuarios.php">aquí</a></p>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

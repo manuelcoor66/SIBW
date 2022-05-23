@@ -1,0 +1,43 @@
+/* Configuración del color de fondo de toda la página */
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+/* Configuración del color de los textos de toda la página */
+a{
+    color: rgb(4, 95, 65);
+}
+
+
+/* Configuración del título */
+.titulo{
+    padding-top: 20px;
+    text-align: center;
+    float: right;
+    width: 99%;
+}
+
+.datos_iniciar{
+    float:right;
+    width: 55.5%;
+    font-size:x-large;
+}
+
+.iniciar_un_dato{
+    margin-top: 10px;
+}
+
+.boton_iniciar{
+    float:right;
+    width: 100%;
+    margin-top: 20px;
+    width: 94%;
+}
+
+.ir_registro{
+    float:right;
+    width: auto;
+    margin-top: 10px;
+    width: 110%;
+    color: rgb(4, 95, 65);
+}

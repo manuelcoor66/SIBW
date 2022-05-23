@@ -1,0 +1,113 @@
+{% extends "portada.html" %}
+
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="../static/css/producto.css">
+{% endblock %}
+
+
+{% block usuarios %}
+<!-- Bloque pie de usuarios -->
+<div class="usuarios">
+	{% if not usuario.user %}
+		<div class="texto-usuario">
+			<p>
+				No estás logueado.
+			</p>
+		</div>
+		<div class="boton-usuario">        
+			<a href="http://localhost/login.php"><button>Inicia sesión</button></a>
+		</div>
+		{% else %}
+		<div class="texto-usuario">
+			<p>
+				USUARIO: <strong>{{ usuario.user.nick }}.</strong>
+			</p>
+		</div>
+
+		<div class="tipo-usuario">
+			{% if usuario.user.super %}
+				<p>Tipo de usuario: Superusuario</p>
+			{% endif %}
+		</div>
+		
+		<div class="boton-usuario">        
+			<a href="http://localhost/logout.php"><button>Salir</button></a>
+		</div>
+
+		<div class="boton-datos">        
+			<a href="http://localhost/cambiar-datos.php"><button>Cambiar datos</button></a>
+		</div>
+	{% endif %}
+</div>
+<!-- Fin Bloque pie de usuarios -->
+{% endblock %}
+
+
+{% block central %}
+<!-- Bloque fotos del  contenedor principal-->
+<div class="container-producto">
+	<div class="todo-producto">
+		<!-- Parte de texto del contenedor principal -->
+		<div class="texto-producto">
+			<h1>{{ pala['nombre'] }}</h1>
+			<h2>Precio de venta: {{ pala['precio'] }}€</h2>
+			<p>{{ pala['descripcion'] }}</p>
+			<h2 class="subrayar">
+				Tipo de jugador al que se le recomienda:
+			</h2>
+			<p>{{ pala['tipo_jugador'] }}</p>
+			<h2 class="subrayar">
+				Características:
+			</h2>
+			<p>{{ pala['caracteristicas'] }}</p>  
+			<a href="{{ pala['enlace'] }}">Pulse aquí para obtener más información.</a>          
+		</div>
+		
+		<div class="fotos-producto">
+			<img src="{{ pala['foto1'] }}"/>
+			<img src="{{ pala['foto2'] }}"/>
+			<img src="{{ pala['foto3'] }}"/>
+		</div>
+	</div>
+
+	<div class="boton"><button class="boton-comentarios" type="button" id="boton-comentarios">Comentarios</button></div>      
+		<div class="subir-comentarios" id="subir-comentarios">
+			<form>
+				<div><label for="Nombre">Nombre</label><br>
+				<input type="text1" id="boton-nombre" placeholder="Introducir nombre"></div>
+				<div><label for="Email">Correo</label><br>
+				<input type="text2" id="boton-correo" placeholder="Introducir correo"></div>
+				<div><label for="Comentario">Comentarios</label><br>
+				<textarea type="text3" id="boton-comentario" onkeyup="censurar_palabras()" placeholder="Introducir comentario"></textarea>
+				<div>
+					<button class="boton-subir" type="button" id="boton-subir">Subir</button>
+				</div>
+			</form>
+
+			<div class="nuevo-comentario"></div>
+
+			<div class="comentarios" id ="comentarios">
+				<div class="comentario">
+					<div class="subrayar" id="subrayar"><span class="coment" id="coment">Comentario:</span></div>                        
+					<p class="nombre" id="nombre">{{ pala['nombre_comentario'] }} <span class="fecha" id="fecha">{{ pala['fecha_comentario'] }}</span></p>
+					<p class="texto">{{ pala['texto_comentario'] }}</p>
+				</div>
+			</div>
+
+			<script src="static/js/producto.js"></script>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block pie %}
+	&nbsp;&nbsp;&nbsp;
+    <!-- Botones sociales y enlaces del contenedor principal-->
+    <a href="https://twitter.com"><button>Twitter</button></a>          
+    &nbsp;  
+    <a href="https://facebook.com"><button>Facebook</button></a>   
+    &nbsp;         
+    <a href="http://localhost/producto-imprimir.php?id={{ pala['idPala'] }}"><button>Imprimir</button></a>
+    <!-- Fin botones sociales y enlaces del contenedor principal-->
+{% endblock %}
+ 

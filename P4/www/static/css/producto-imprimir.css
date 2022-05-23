@@ -1,0 +1,100 @@
+/* Configuración de la cabecera de la página */
+.header{
+    width: 100%;
+    height: auto;
+}
+
+a{
+    background-color: white;
+    color: black;
+}
+
+/* Configuración del logo de la cabecera */
+.logo{
+    max-width: 65%;
+    height: auto;
+    padding: 5px;
+    gap: 10px;
+    text-align: center;
+    display:block;
+    margin:auto;
+}
+
+/* Configuración del contenedor de la cabecera que contiene el título y el menú */
+.container-title-menu{
+    display: none;
+}
+
+
+/* Configuración del contenedor principal que contiene las fotos y los elementos auxilares */
+.container-principal{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+}
+
+/* Configuración del contenedor que tiene las fotos del contenedor principal*/
+.container-producto{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: justify;
+    display: flex;
+}
+
+.todo-producto{
+	margin: 20px;
+}
+
+.subrayar{
+    text-decoration: underline;
+} 
+
+.texto-producto{
+	float: left;
+    width: 40%;
+    height: auto;
+}
+
+.fotos-producto{
+	float: right;
+    margin-top: 30px;
+    width: 48%;
+    height: auto;
+    text-align: center;
+}
+
+.fin-texto{
+    display: none;
+}
+
+.botones-sociales{
+    display: none;
+}
+
+/* Configuración del lateral que contiene los enlaces de interés del contenedor principal*/
+.lateral{
+    display: none;
+}
+
+.boton{
+    display: none;
+}
+
+.subir-comentarios{
+    display: none;
+}
+
+
+
+/* Configuración del contenedor que tiene el pie de la página */
+.pie {
+    float: right;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
