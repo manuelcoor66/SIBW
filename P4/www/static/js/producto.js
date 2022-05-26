@@ -45,8 +45,8 @@ post.addEventListener("click", function(){
             var fecha = " " + d.getDate() + '/' + mes + '/' + d.getFullYear() + ' ' + d.getHours() + ':' + minutos;
             var p2 = document.createElement('p');
             p2.classList.add("texto");
-            var boton = document.getElementById("boton-cambiar");
 
+            
             span1.textContent = "Comentario:";
             div2.append(span1);
             span2.textContent = fecha;
@@ -56,7 +56,6 @@ post.addEventListener("click", function(){
             div1.append(div2);
             div1.append(p1);
             div1.append(p2);
-            div1.append(boton2);
             div.prepend(div1);
         }
         else {  

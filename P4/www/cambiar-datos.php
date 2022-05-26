@@ -53,16 +53,14 @@
     if (empty($errors) == true) {
       if($usuarios['cantidad']==0 || $vacio==true) {
         actualizarUsuario($nombre, $apellidos, $email, $usuario, $contrasena);
-        
-        session_destroy(); 
-
-        header("Location: index.php");
-      
-        exit();
       }
     }
-
+   
+    session_destroy(); 
+  
     header("Location: index.php");
+  
+    exit();
   }
 
   echo $twig->render('cambiar-datos.html', []);

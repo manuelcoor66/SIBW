@@ -20,6 +20,7 @@
       $_SESSION['apellidos'] = $usuario['apellidos'];
       $_SESSION['email'] = $usuario['email'];
       $_SESSION['tipo'] = $usuario['tipo'];
+      $_SESSION['edicion'] = $usuario['edicion'];
     }
     
     header("Location: index.php");

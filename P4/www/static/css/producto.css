@@ -148,21 +148,9 @@ a{
 } 
 
 .subrayar-comentario{
-    float: right;
-    width: auto;
+    float: left;
     text-decoration: underline;
 } 
-
-.boton-cambiar{
-    float: right;
-    width: auto;
-    text-decoration: underline;
-}
-
-.nombre{
-    float: right;
-    width: 100%;
-}
 
 
 /* Configuración del texto del producto */

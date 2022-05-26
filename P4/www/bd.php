@@ -11,14 +11,15 @@
 		$mysqli = connect();
 
 		$res = $mysqli->query("SELECT nombre, precio, descripcion, tipo_jugador, caracteristicas, enlace, foto1, foto2, foto3, 
-							nombre_comentario, fecha_comentario, texto_comentario FROM Productos WHERE id=" . $idPala);
+							nombre_comentario, fecha_comentario, texto_comentario, edicion FROM Productos WHERE id=" . $idPala);
 
 		$pala = array('nombre' => 'nombre por defecto', 'precio' => 'precio por defecto', 'descripcion' => 
 					  'descripcion por defecto', 'tipo_jugador' => 'tipo_jugador por defecto', 'caracteristicas' => 
 					  'caracteristicas por defecto', 'enlace' => 'enlace por defecto', 'foto1' => 'foto1 por defecto', 'foto2'
 					  => 'foto2 por defecto', 'foto3' => 'foto3 por defecto', 'nombre_comentario' => 
 					  'nombre_comentario por defecto', 'fecha_comentario' => 'fecha_comentario por defecto', 
-					  'texto_comentario' => 'texto_comentario por defecto', 'idPala' => 'idPala por defecto');
+					  'texto_comentario' => 'texto_comentario por defecto', 'edicion' =>
+					  'edicion por defecto', 'idPala' => 'idPala por defecto');
 
 		if ($res->num_rows > 0) {
 			$row = $res->fetch_assoc();
@@ -27,7 +28,7 @@
 						  'tipo_jugador' => $row['tipo_jugador'], 'caracteristicas' => $row['caracteristicas'], 'enlace' 
 						  => $row['enlace'], 'foto1' => $row['foto1'], 'foto2' => $row['foto2'], 'foto3' => $row['foto3'], 
 						  'nombre_comentario' => $row['nombre_comentario'], 'fecha_comentario' => $row['fecha_comentario'], 
-						  'texto_comentario' => $row['texto_comentario'], 'idPala' => $idPala);
+						  'texto_comentario' => $row['texto_comentario'], 'edicion' => $row['edicion'], 'idPala' => $idPala);
 		}
 
 		return $pala;
@@ -225,5 +226,21 @@
 
 		$id = $_SESSION['id'];
 		$res = $mysqli->query("UPDATE `Etiquetas` SET `Nombre`='$etiqueta_nueva' WHERE `Nombre`='$etiqueta_antigua' AND `id`='$id'");
+	}
+
+	function eliminarComentario() {
+		$mysqli = connect();
+
+		$comentario='""Comentario eliminado por un moderador""';
+		$id = $_SESSION['id'];
+		$res = $mysqli->query("UPDATE `Productos` SET `texto_comentario`='', `edicion`='$comentario' WHERE `id`='$id'");
+	}
+
+	function cambiarComentario($comentario) {
+		$mysqli = connect();
+
+		$cambio='""Comentario cambiado por un moderador""';
+		$id = $_SESSION['id'];
+		$res = $mysqli->query("UPDATE `Productos` SET `texto_comentario`='$comentario', `edicion`='$cambio' WHERE `id`='$id'");
 	}
 ?>

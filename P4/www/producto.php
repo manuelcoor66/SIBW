@@ -12,11 +12,11 @@
   } else {
     $idPala = -1;
   }
-   
-  $pala = getPala($idPala);
 
   
   session_start();
+   
+  $pala = getPala($idPala);
 
   $_SESSION['id'] = $idPala;
   

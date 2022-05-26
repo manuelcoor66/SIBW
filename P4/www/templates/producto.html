@@ -88,15 +88,19 @@
 				<p>Etiquetas: </p>
 				{% for i in etiquetas %}
 					<p>* {{ i }}</p>
-				  {% endfor %}
-					
-				<div class="botones-etiquetas">
-					<nav>
-						<a href="http://localhost/cambiar-etiqueta.php"><button>Cambiar</button></a> 
-						<a href="http://localhost/añadir-etiqueta.php"><button>Añadir</button></a> 
-						<a href="http://localhost/eliminar-etiqueta.php"><button>Eliminar</button></a> 
-					</nav>
-				</div>
+				{% endfor %}
+
+				{% if usuario %}
+					{% if (tipo == 0) or (tipo == 3) %}	
+						<div class="botones-etiquetas">
+							<nav>
+								<a href="http://localhost/cambiar-etiqueta.php"><button>Cambiar</button></a> 
+								<a href="http://localhost/añadir-etiqueta.php"><button>Añadir</button></a> 
+								<a href="http://localhost/eliminar-etiqueta.php"><button>Eliminar</button></a> 
+							</nav>
+						</div>
+					{% endif %}
+				{% endif %}
 			</div>
 		</div>
 
@@ -122,15 +126,22 @@
 
 				<div class="comentarios" id ="comentarios">
 					<div class="comentario">
-						<div class="subrayar" id="subrayar"><span class="coment" id="coment">Comentario:</span></div>   
+						<div class="subrayar" id="subrayar"><span class="coment" id="coment">Comentario: </span></div> 
 						<p class="nombre" id="nombre">{{ pala['nombre_comentario'] }} <span class="fecha" id="fecha">{{ pala['fecha_comentario'] }}</span></p>
 						<p class="texto">{{ pala['texto_comentario'] }}</p>
-						<button class="boton-cambiar" type="button" id="boton-cambiar">Cambiar</button>
+						<p class="edicion">{{ pala['edicion'] }}</p>
 					</div>
 				</div>
 
 				<script src="static/js/producto.js"></script>
 			</div> 
+
+			{% if (tipo == 0) or (tipo == 2) %}	
+			<div class="botones">
+				<a href="http://localhost/eliminar-comentario.php"><button>Eliminar</button></a>  
+				<a href="http://localhost/cambiar-comentario.php"><button>Cambiar</button></a>  
+			</div>
+			{% endif %}
 		</div>
 		{% endif %}
 </div>

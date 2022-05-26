@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <title>Cambiar datos usuario</title>
+    <!-- Ruta relativa del fichero de style (style.css) -->
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="../static/css/cambiar-comentario.css">
+    {% endblock %}
+  </head>
+  
+  <body>
+    <div class="parte-central">
+      <div class="titulo">
+          <h1>
+              Cambiar comentario
+          </h1>
+      </div>
+
+      <div class="datos_cambiar">
+        <form action="cambiar-comentario.php" method="POST">
+          <div class="cambiar_un_dato"><label for="Nombre">Nuevo Comentario</label><br>
+          <input type="text" name="Comentario" placeholder="Introducir Nuevo Comentario"/><br>
+          
+          <div class="boton_cambiar">
+            <input type="submit" value="Cambiar comentario" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
