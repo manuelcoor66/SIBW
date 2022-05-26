@@ -14,6 +14,13 @@
           </h1>
       </div>
 
+      <div class="etiquetas">
+        <p>Etiquetas de este producto:</p>
+        {% for i in etiquetas %}
+          <p>* {{ i }}</p>
+        {% endfor %}
+      </div>
+
       <div class="datos_añadir">
         <form action="añadir-etiqueta.php" method="POST">
           <div class="añadir_un_dato"><label for="Nombre">Etiqueta</label><br>

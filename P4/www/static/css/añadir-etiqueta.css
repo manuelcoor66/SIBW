@@ -17,10 +17,16 @@ a{
     width: 99%;
 }
 
+.etiquetas{
+    float: right;
+    width: 55%;
+}
+
 .datos_añadir{
     float:right;
     width: 55.5%;
     font-size:x-large;
+    margin-top: 20px;
 }
 
 .añadir_un_dato{

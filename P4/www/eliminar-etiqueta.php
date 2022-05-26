@@ -7,6 +7,8 @@
   require_once 'bd.php';  
   
   session_start();
+
+  $etiquetas = getEtiquetas($_SESSION['id']);  
   
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errors = array();
@@ -30,5 +32,5 @@
     exit();
   }
 
-  echo $twig->render('eliminar-etiqueta.html', []);
+  echo $twig->render('eliminar-etiqueta.html', ['etiquetas' => $etiquetas]);
 ?>

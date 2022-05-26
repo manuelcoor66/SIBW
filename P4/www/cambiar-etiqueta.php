@@ -7,6 +7,8 @@
   require_once 'bd.php';  
   
   session_start();
+
+  $etiquetas = getEtiquetas($_SESSION['id']);
   
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errors = array();
@@ -34,5 +36,5 @@
     exit();
   }
 
-  echo $twig->render('cambiar-etiqueta.html', []);
+  echo $twig->render('cambiar-etiqueta.html', ['etiquetas' => $etiquetas]);
 ?>

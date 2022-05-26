@@ -7,6 +7,8 @@
   require_once 'bd.php';  
   
   session_start();
+
+  $etiquetas = getEtiquetas($_SESSION['id']);
   
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errors = array();
@@ -29,5 +31,5 @@
     exit();
   }
 
-  echo $twig->render('añadir-etiqueta.html', []);
+  echo $twig->render('añadir-etiqueta.html', ['etiquetas' => $etiquetas]);
 ?>

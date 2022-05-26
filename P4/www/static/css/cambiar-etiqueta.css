@@ -17,10 +17,16 @@ a{
     width: 99%;
 }
 
+.etiquetas{
+    float: right;
+    width: 55%;
+}
+
 .datos_cambiar{
     float:right;
     width: 55.5%;
     font-size:x-large;
+    margin-top: 20px;
 }
 
 .cambiar_un_dato{
