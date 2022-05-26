@@ -16,7 +16,7 @@
     $usuario = $_POST['Usuario'];
     $contrasena = $_POST['Contraseña'];
     $usuarios = cantidadUsuarios($usuario);
-    
+    $vacio=false;
 
     
     if (empty($nombre)==true && empty($apellidos)==true && empty($email)==true && empty($usuario)==true && empty($contrasena)==true) {
@@ -37,6 +37,7 @@
 
     if (empty($usuario)==true) {
       $usuario = $_SESSION['usuario'];
+      $vacio=true;
     }
     
     if (empty($contrasena)==true) {
@@ -44,7 +45,7 @@
     }
 
     if (empty($errors) == true) {
-      if($usuarios['cantidad']==1) {
+      if($usuarios['cantidad']==0 || $vacio==true) {
         actualizarUsuario($nombre, $apellidos, $email, $usuario, $contrasena);
         
         session_destroy(); 
