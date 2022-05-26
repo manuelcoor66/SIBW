@@ -39,6 +39,12 @@
       $usuario = $_SESSION['usuario'];
       $vacio=true;
     }
+
+    print($_SESSION['usuario']);
+
+    if ($usuario == $_SESSION['usuario']) {
+      $vacio = true;
+    }
     
     if (empty($contrasena)==true) {
       $contrasena = $_SESSION['contraseña'];

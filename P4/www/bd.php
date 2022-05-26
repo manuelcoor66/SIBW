@@ -106,7 +106,7 @@
 		return $usuario;
 	}
 
-	function totalUsuarios($user) {
+	function totalUsuarios() {
 		$mysqli = connect();
 		
 		$res = $mysqli->query("SELECT COUNT(*) FROM Usuarios");
@@ -122,5 +122,108 @@
 		return $usuario;
 	}
 
+	function getUsuarios() {
+		$mysqli = connect();
+		
+		$res = $mysqli->query("SELECT Nombre_usuario FROM Usuarios");
+        $usuarios=array();
+               
+		if ($res->num_rows > 0) {
+			while($row = $res->fetch_assoc()) {
+				$usuarios[] = $row['Nombre_usuario'];
+			}
+		}
 
+		return $usuarios;
+	}
+
+	function getTipos() {
+		$mysqli = connect();
+		
+		$res = $mysqli->query("SELECT Tipo_usuario FROM Usuarios");
+        $usuarios=array();
+               
+		if ($res->num_rows > 0) {
+			while($row = $res->fetch_assoc()) {
+				$usuarios[] = $row['Tipo_usuario'];
+			}
+		}
+
+		return $usuarios;
+	}
+
+	function actualizarTipo($usuario, $tipo) {
+		$mysqli = connect();
+		
+		$mysqli->query("UPDATE `Usuarios` SET `Tipo_usuario`='$tipo' WHERE `Nombre_usuario`='$usuario'");
+	}
+
+	function getTipoUsuario($usuario) {
+		$mysqli = connect();
+		
+		$res = $mysqli->query("SELECT Tipo_usuario FROM Usuarios WHERE `Nombre_usuario`='$usuario'");
+
+		$tipo = array('tipo' => 'tipo por defecto');
+		
+		if ($res->num_rows > 0) {
+			$row = $res->fetch_assoc();
+
+			$tipo = array('tipo' => $row['Tipo_usuario']);
+		}
+
+		return $tipo;
+	}
+
+	function totalSupersuarios() {
+		$mysqli = connect();
+		
+		$res = $mysqli->query("SELECT COUNT(*) FROM Usuarios WHERE `Tipo_Usuario`='0'");
+
+		$total = array('cantidad' => 'cantidad por defecto');
+		
+		if ($res->num_rows > 0) {
+			$row = $res->fetch_assoc();
+
+			$total = array('cantidad' => $row['COUNT(*)']);
+		}
+
+		return $total;
+	}
+
+	function getEtiquetas($id) {
+		$mysqli = connect();
+		
+		$res = $mysqli->query("SELECT Nombre FROM Etiquetas WHERE id='$id'");
+		$etiquetas=array();
+		
+		if ($res->num_rows > 0) {
+			while($row = $res->fetch_assoc()) {
+				$etiquetas[] = $row['Nombre'];
+			}
+
+		}
+
+		return $etiquetas;
+	}
+	
+	function eliminarEtiqueta($etiqueta) {
+		$mysqli = connect();
+
+		$id = $_SESSION['id'];
+		$res = $mysqli->query("DELETE FROM `Etiquetas` WHERE `Nombre`='$etiqueta' AND `id`='$id'");
+	}
+	
+	function insertarEtiqueta($etiqueta) {
+		$mysqli = connect();
+
+		$id = $_SESSION['id'];
+		$res = $mysqli->query("INSERT INTO `Etiquetas`(`id`, `Nombre`) VALUES ('$id', '$etiqueta')");
+	}
+
+	function cambiarEtiqueta($etiqueta_nueva, $etiqueta_antigua) {
+		$mysqli = connect();
+
+		$id = $_SESSION['id'];
+		$res = $mysqli->query("UPDATE `Etiquetas` SET `Nombre`='$etiqueta_nueva' WHERE `Nombre`='$etiqueta_antigua' AND `id`='$id'");
+	}
 ?>

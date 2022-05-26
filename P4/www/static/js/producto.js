@@ -47,7 +47,6 @@ post.addEventListener("click", function(){
             p2.classList.add("texto");
             var boton = document.getElementById("boton-cambiar");
 
-            div2.append(boton);
             span1.textContent = "Comentario:";
             div2.append(span1);
             span2.textContent = fecha;
@@ -57,6 +56,7 @@ post.addEventListener("click", function(){
             div1.append(div2);
             div1.append(p1);
             div1.append(p2);
+            div1.append(boton2);
             div.prepend(div1);
         }
         else {  

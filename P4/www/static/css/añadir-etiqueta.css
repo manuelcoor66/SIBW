@@ -1,5 +1,5 @@
-/* Configuración del color de fondo de toda la página */
-body{
+ /* Configuración del color de fondo de toda la página */
+ body{
     background-color: rgb(255, 255, 255);
 }
 
@@ -17,35 +17,19 @@ a{
     width: 99%;
 }
 
-.mostrar{
-    height: 100%;
-    width: 100%;
-}
-
-.tipos{
-    float:inline-end;
-    width: 45%;
-}
-
-.usuarios{
-    float:inline-end;
-    width: 10%;
-}
-
-.datos_cambiar{
+.datos_añadir{
     float:right;
     width: 55.5%;
     font-size:x-large;
-    padding-top: 20px;
 }
 
-.cambiar_un_dato{
+.añadir_un_dato{
     margin-top: 10px;
 }
 
-.boton_cambiar{
+.boton_añadir{
     float:right;
     width: 100%;
     margin-top: 20px;
-    width: 92%;
+    width: 94%;
 }

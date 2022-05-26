@@ -10,27 +10,39 @@
 
   $permisos=array();
 
+  $cantidad = totalUsuarios();
+  $salida = $cantidad['cantidad'];
+  $usuarios = getUsuarios();
+  $tipos = getTipos();
 
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errors= array();
     $usuario = $_POST['Usuario'];
     $tipo = $_POST['Tipo'];
-    $usuarios = nombreUsuarios();
-    $tipos = tipoUsuarios();
-    $cantidad = count($usuarios);
+    $cantidad = cantidadUsuarios($usuario);
+    $cant_super = totalSupersuarios();
+    $tipo_probar = getTipoUsuario($usuario);
 
-    if (empty($usuario) || empty($tip)) {
+    if (empty($usuario) || empty($tipo)) {
       $errors[] = "Usuario no bien inicializado, hay algún dato vacío";
     }
 
     if(empty($errors)==true) {
-      if($cantidad==0) {
-  
-        session_destroy(); 
-  
-        header("Location: index.php");
-      
-        exit();
+      if($cantidad['cantidad']==1 && $tipo>=0  && $tipo<=3) {
+        if ($cant_super['cantidad'] > 1) {
+          actualizarTipo($usuario, $tipo);
+
+          header("Location: index.php");
+        
+          exit();
+        }
+        elseif($tipo_probar['tipo'] != 0) {
+          actualizarTipo($usuario, $tipo);
+
+          header("Location: index.php");
+        
+          exit();
+        }
       }
     }
 
@@ -39,11 +51,5 @@
     exit();
   }
 
-  //$permisos=cantidadUsuarios($_SESSION['usuario']);
-    
-  //header("Location: index.php");
-    
-  //exit();
-
-  echo $twig->render('gestion-permisos.html', ['cantidad' => $cantidad]);
+  echo $twig->render('gestion-permisos.html', ['cantidad' => $salida, 'usuarios' => $usuarios, 'tipos' => $tipos]);
 ?>

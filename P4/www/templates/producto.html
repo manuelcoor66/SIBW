@@ -78,10 +78,29 @@
 		</div>
 		
 		<div class="fotos-producto">
-			<img src="{{ pala['foto1'] }}"/>
-			<img src="{{ pala['foto2'] }}"/>
-			<img src="{{ pala['foto3'] }}"/>
+			<div class="fotos">
+				<img src="{{ pala['foto1'] }}"/>
+				<img src="{{ pala['foto2'] }}"/>
+				<img src="{{ pala['foto3'] }}"/>
+			</div>
+
+			<div class="etiquetas">
+				<p>Etiquetas: </p>
+				{% for i in etiquetas %}
+					<p>* {{ i }}</p>
+				  {% endfor %}
+					
+				<div class="botones-etiquetas">
+					<nav>
+						<a href="http://localhost/cambiar-etiqueta.php"><button>Cambiar</button></a> 
+						<a href="http://localhost/añadir-etiqueta.php"><button>Añadir</button></a> 
+						<a href="http://localhost/eliminar-etiqueta.php"><button>Eliminar</button></a> 
+					</nav>
+				</div>
+			</div>
 		</div>
+
+		
 	</div>
 
 	{% if usuario %}
