@@ -64,7 +64,7 @@
 		$_SESSION['prueba'] = $usuario['contrasena'];
 
 		return $usuario;
-	}
+	}	
 	
 	function comprobarUsuario($pass) {
 		if (password_verify($pass, $_SESSION['prueba']))
@@ -90,30 +90,37 @@
 		$res = $mysqli->query("INSERT INTO Usuarios (Nombre, Apellidos, Email, Nombre_usuario, Contraseña, Tipo_usuario) VALUES ('$nombre','$apellidos','$email','$usuario','$hash','1')");
 	}
 
-	function getTipoUsuarios() {
+	function cantidadUsuarios($user) {
 		$mysqli = connect();
+		
+		$res = $mysqli->query("SELECT COUNT(*) FROM Usuarios WHERE Nombre_usuario='Manuel'");
 
-		$res = $mysqli->query("SELECT Nombre_usuario, Tipo_usuario FROM `Usuarios`");
-
-		if ($res->num_rows > 0) {
-			while($row = $res->fetch_assoc()) {
-				$tipo['usuario'] = $row['Nombre_usuario'];
-				$tipo['tipo'] = $row['Tipo_usuario'];
-			}
-		}
-
-		return $tipo;
-	}
-
-	function nombreUsuarios() {
-		$mysqli = connect();
-
-		$res = $mysqli->query("SELECT Nombre_usuario FROM Usuarios");
-
+		$usuario = array('cantidad' => 'cantidad por defecto');
+		
 		if ($res->num_rows > 0) {
 			$row = $res->fetch_assoc();
+
+			$usuario = array('cantidad' => $row['COUNT(*)']);
 		}
 
-		return $row;
+		return $usuario;
 	}
+
+	function totalUsuarios($user) {
+		$mysqli = connect();
+		
+		$res = $mysqli->query("SELECT COUNT(*) FROM Usuarios");
+
+		$usuario = array('cantidad' => 'cantidad por defecto');
+		
+		if ($res->num_rows > 0) {
+			$row = $res->fetch_assoc();
+
+			$usuario = array('cantidad' => $row['COUNT(*)']);
+		}
+
+		return $usuario;
+	}
+
+
 ?>

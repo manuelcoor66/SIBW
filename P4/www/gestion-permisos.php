@@ -15,16 +15,16 @@
     $errors= array();
     $usuario = $_POST['Usuario'];
     $tipo = $_POST['Tipo'];
+    $usuarios = nombreUsuarios();
+    $tipos = tipoUsuarios();
+    $cantidad = count($usuarios);
 
     if (empty($usuario) || empty($tip)) {
       $errors[] = "Usuario no bien inicializado, hay algún dato vacío";
     }
 
-    $prueba = 'b';
-    $cantidad = cantidadUsuarios($usuario);
     if(empty($errors)==true) {
       if($cantidad==0) {
-        registrarUsuario($prueba, $prueba, $prueba, $prueba, $prueba);
   
         session_destroy(); 
   
