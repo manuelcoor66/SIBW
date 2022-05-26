@@ -1,6 +1,5 @@
-<html>
-  <head>
-    <title>Login/registro de usuario</title>
+<!DOCTYPE html>
+  <title>Cambiar datos usuario</title>
     <!-- Ruta relativa del fichero de style (style.css) -->
     {% block css %}
     <link rel="stylesheet" type="text/css" href="../static/css/cambiar-datos.css">
@@ -13,27 +12,32 @@
           <h1>
               Cambiar datos
           </h1>
+          <div class="mensaje">
+            <p>
+              Al cambiar los datos se va a reiniciar la cuenta para que todo cargue bien.
+            </p>
+          </div>
       </div>
 
       <div class="datos_cambiar">
-        <form action="login.php" method="post">
+        <form action="cambiar-datos.php" method="POST">
           <div class="cambiar_un_dato"><label for="Nombre">Nombre</label><br>
-          <input type="text" name="nick" placeholder="Introducir Nombre"/><br>
+          <input type="text" name="Nombre" placeholder="Introducir Nombre"/><br>
 
           <div class="cambiar_un_dato"><label for="Apellidos">Apellidos</label><br>
-          <input type="text" name="contraseña" placeholder="Introducir Apellidos"/><br>
+          <input type="text" name="Apellidos" placeholder="Introducir Apellidos"/><br>
 
           <div class="cambiar_un_dato"><label for="Email">Email</label><br>
-          <input type="text" name="nick" placeholder="Introducir Email"/><br>
+          <input type="text" name="Email" placeholder="Introducir Email"/><br>
 
           <div class="cambiar_un_dato"><label for="Usuario">Usuario</label><br>
-          <input type="text" name="contraseña" placeholder="Introducir Usuario"/><br>
+          <input type="text" name="Usuario" placeholder="Introducir Usuario"/><br>
 
           <div class="cambiar_un_dato"><label for="Contraseña">Contraseña</label><br>
-          <input type="password" name="contraseña" placeholder="Introducir Contraseña"/><br>
+          <input type="password" name="Contraseña" placeholder="Introducir Contraseña"/><br>
           
-            <div class="boton_cambiar">
-            <input type="submit" value="iniciar sesión" />
+          <div class="boton_cambiar">
+            <input type="submit" value="Cambiar datos" />
           </div>
         </form>
       </div>

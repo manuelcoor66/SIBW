@@ -1,4 +1,4 @@
- /* Configuración del color de fondo de toda la página */
+/* Configuración del color de fondo de toda la página */
 body{
     background-color: rgb(255, 255, 255);
 }
@@ -35,5 +35,5 @@ a{
     float:right;
     width: 100%;
     margin-top: 20px;
-    width: 94%;
+    width: 92%;
 }

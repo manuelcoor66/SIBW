@@ -45,8 +45,9 @@ post.addEventListener("click", function(){
             var fecha = " " + d.getDate() + '/' + mes + '/' + d.getFullYear() + ' ' + d.getHours() + ':' + minutos;
             var p2 = document.createElement('p');
             p2.classList.add("texto");
+            var boton = document.getElementById("boton-cambiar");
 
-            
+            div2.append(boton);
             span1.textContent = "Comentario:";
             div2.append(span1);
             span2.textContent = fecha;

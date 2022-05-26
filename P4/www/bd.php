@@ -51,22 +51,20 @@
 	function getUsuario($user) {
 		$mysqli = connect();
 		
-		$res = $mysqli->query("SELECT Nombre_usuario, Contraseña, Tipo_usuario FROM Usuarios WHERE Nombre_usuario='$user'");
+		$res = $mysqli->query("SELECT * FROM Usuarios WHERE Nombre_usuario='$user'");
 
-		$usuario = array('nombre' => 'nombre_ por defecto', 'contraseña' => 'contraseña por defecto', 'tipo' => 'tipo por defecto');
+		$usuario = array('nombre' => 'nombre_usuario por defecto', 'apellidos' => 'nombre_usuario por defecto', 'email' => 'email por defecto', 'usuario' => 'nombre_usuario por defecto', 'contraseña' => 'contraseña por defecto', 'tipo' => 'tipo por defecto');
 		
 		if ($res->num_rows > 0) {
 			$row = $res->fetch_assoc();
 
-			$usuario = array('nombre' => $row['Nombre_usuario'], 'contrasena' => $row['Contraseña'], 'tipo' => $row['Tipo_usuario']);
+			$usuario = array('nombre' => $row['Nombre'], 'apellidos' => $row['Apellidos'], 'email' => $row['Email'], 'usuario' => $row['Nombre_usuario'], 'contrasena' => $row['Contraseña'], 'tipo' => $row['Tipo_usuario']);
 		}
 
 		$_SESSION['prueba'] = $usuario['contrasena'];
-		$_SESSION['tipo'] = $usuario['tipo'];
 
 		return $usuario;
 	}
-	
 	
 	function comprobarUsuario($pass) {
 		if (password_verify($pass, $_SESSION['prueba']))
@@ -74,42 +72,48 @@
 
 		return false;
 	}
-	
-	
-// Lo que aparece en el "hash" se ha obtenido de:
-// password_hash('passwordSuperSeguro', PASSWORD_DEFAULT)  ---->  $2y$10$mGwJK76zo6rjkZL3j6YU6uKmjNtV51jmMy8zSUUFt/uuPmzfZeQ0O
-// password_hash('otroPassword', PASSWORD_DEFAULT)  ---->  $2y$10$XfxLjcJB.54YreU8SOr1y.vEeRMnuu6izd0xAZwSeuQQZGyJ1TT.y 
-	$usuarios = [ ['nick' => 'Manuel', 'pass' => '$2y$10$mGwJK76zo6rjkZL3j6YU6uKmjNtV51jmMy8zSUUFt/uuPmzfZeQ0O', 'super' => true],
-                ['nick' => 'Contreritas', 'pass' => '$2y$10$XfxLjcJB.54YreU8SOr1y.vEeRMnuu6izd0xAZwSeuQQZGyJ1TT.y', 'super' => false]
-              ];
-  
-  
-  // Devuelve true si existe un usuario con esa contraseña
-  function checkLogin($nick, $pass) {
-    global $usuarios;
-    
-    for ($i = 0 ; $i < sizeof($usuarios) ; $i++) {
-      if ($usuarios[$i]['nick'] === $nick) {
-       
-        if (password_verify($pass, $usuarios[$i]['pass'] )) {
-          return true;
-        }
-      }
-    }
-    
-    return false;
-  }
-  
-  // Devuelve la información de un usuario a partir de su nick 
-  function getUser($nick) {
-    global $usuarios;
-    
-    for ($i = 0 ; $i < sizeof($usuarios) ; $i++) {
-      if ($usuarios[$i]['nick'] === $nick) {
-        return $usuarios[$i];
-      }
-    }
-    
-    return 0;
-  }
+
+	function actualizarUsuario($nombre, $apellidos, $email, $usuario, $contrasena) {
+		$mysqli = connect();
+
+		$usuario_original = $_SESSION['usuario'];
+		$hash = password_hash($contrasena, PASSWORD_DEFAULT);
+		
+		$mysqli->query("UPDATE `Usuarios` SET `Nombre`='$nombre',`Apellidos`='$apellidos',`Email`='$email',`Nombre_usuario`='$usuario',`Contraseña`='$hash' WHERE `Nombre_usuario`='$usuario_original'");
+	}
+
+	function registrarUsuario($nombre, $apellidos, $email, $usuario, $contrasena) {
+		$mysqli = connect();
+
+		$hash = password_hash($contrasena, PASSWORD_DEFAULT);
+		
+		$res = $mysqli->query("INSERT INTO Usuarios (Nombre, Apellidos, Email, Nombre_usuario, Contraseña, Tipo_usuario) VALUES ('$nombre','$apellidos','$email','$usuario','$hash','1')");
+	}
+
+	function getTipoUsuarios() {
+		$mysqli = connect();
+
+		$res = $mysqli->query("SELECT Nombre_usuario, Tipo_usuario FROM `Usuarios`");
+
+		if ($res->num_rows > 0) {
+			while($row = $res->fetch_assoc()) {
+				$tipo['usuario'] = $row['Nombre_usuario'];
+				$tipo['tipo'] = $row['Tipo_usuario'];
+			}
+		}
+
+		return $tipo;
+	}
+
+	function nombreUsuarios() {
+		$mysqli = connect();
+
+		$res = $mysqli->query("SELECT Nombre_usuario FROM Usuarios");
+
+		if ($res->num_rows > 0) {
+			$row = $res->fetch_assoc();
+		}
+
+		return $row;
+	}
 ?>

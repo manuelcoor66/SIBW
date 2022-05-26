@@ -24,13 +24,21 @@
                 <p>
                     USUARIO: <strong>{{ usuario }}</strong>
                 </p>
-                <p>
-                    CONTRASEÑA: <strong>{{ contrasena }}</strong>
-                </p>
             </div>
-
+            
             <div class="tipo-usuario">
-                    <p>Tipo de usuario: <strong>{{ tipo }}</strong></p>
+                {% if tipo == 0 %}
+                    <p>Tipo de usuario: <strong>Superusuario</strong></p>
+                {% endif %}
+                {% if tipo == 1 %}
+                    <p>Tipo de usuario: <strong>Registrado</strong></p>
+                {% endif %}
+                {% if tipo == 2 %}
+                    <p>Tipo de usuario: <strong>Moderador</strong></p>
+                {% endif %}
+                {% if    tipo == 3 %}
+                    <p>Tipo de usuario: <strong>Gestor</strong></p>
+                {% endif %}
             </div>
             
             <div class="boton-usuario">        
@@ -40,6 +48,11 @@
             <div class="boton-datos">        
                 <a href="http://localhost/cambiar-datos.php"><button>Cambiar datos</button></a>
             </div>
+            {% if tipo == 0 %}
+                <div class="boton-permisos">        
+                    <a href="http://localhost/gestion-permisos.php"><button>Gestión permisos</button></a>
+                </div>
+            {% endif %}
          {% endif %}
     </div>
     <!-- Fin Bloque pie de usuarios -->

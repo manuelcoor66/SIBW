@@ -14,13 +14,12 @@
    
   $pala = getPala($idPala);
   
-  $variablesParaTwig = [];
-  
   session_start();
   
-  if (isset($_SESSION['nickUsuario'])) {
-    $variablesParaTwig['user'] = getUser($_SESSION['nickUsuario']);
-  }
+  $user = $_SESSION['usuario'];
+  $contrasena = $_SESSION['contraseña'];
+  $tipo = $_SESSION['tipo'];
+  $email = $_SESSION['email'];
   
-  echo $twig->render('producto.html', ['pala' => $pala, 'usuario' => $variablesParaTwig]);
+  echo $twig->render('producto.html', ['pala' => $pala, 'usuario' => $user, 'contrasena' => $contrasena, 'tipo' => $tipo, 'email' => $email]);
 ?>

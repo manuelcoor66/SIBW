@@ -38,21 +38,14 @@ a{
 
 .tipo-usuario{
     float:left;
-    width: 25%;
-    height: auto;
-    text-align: center;
-}
-
-.tipo-usuario{
-    float:left;
-    width: 25%;
+    width: 20%;
     height: auto;
     text-align: center;
 }
 
 .boton-datos{
     float:right;
-    width: 15%;
+    width: 10%;
     height: auto;
     text-align: center;
     padding-top: 15px;
@@ -60,6 +53,15 @@ a{
 
 /* Configuración de inicialización de usuarios */
 .boton-usuario{
+    float:right;
+    width: 10%;
+    height: auto;
+    text-align: center;
+    padding-top: 15px;
+    padding-right: 20px;
+}
+
+.boton-permisos{
     float:right;
     width: 10%;
     height: auto;
@@ -145,6 +147,25 @@ a{
     text-decoration: underline;
 } 
 
+.subrayar-comentario{
+    float: right;
+    width: auto;
+    text-decoration: underline;
+} 
+
+.boton-cambiar{
+    float: right;
+    width: auto;
+    text-decoration: underline;
+    padding-left: 20px;
+}
+
+.nombre{
+    float: right;
+    width: 100%;
+}
+
+
 /* Configuración del texto del producto */
 .texto-producto{
     float: left;
@@ -171,6 +192,10 @@ a{
     margin-left: 45%;
     padding: 1%;
     margin-bottom: 10px;
+}
+
+.boton-subir{
+    margin: 10px;
 }
 
 /* Configuración de la parte que introduce los nuevos comentarios */
@@ -202,7 +227,7 @@ a{
     font-size: 150%;
     width: 25%;
     height: auto;
-    padding: 5px;
+    padding: 10px;
     margin: 10px;
     border-radius: 20px;
     background-color: rgb(201, 245, 230);

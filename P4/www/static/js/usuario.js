@@ -42,6 +42,18 @@ function censurar_palabras(){
     }
 }
 
+function mala_palabra(palabra){
+    var censuradas = banned_words;
+    var fin = false;
+
+    for (var comparar of censuradas && fin == false) {
+        if (comparar == palabra)
+            fin = true;
+    }
+
+    return fin;
+}
+
 function todos_rellenos_registrar(CB1, CB2, CB3, CB4, CB5){
     if (CB1 == "" || CB2 == "" || CB3 == "" || CB4 == "" || CB5 == "") {
         alert("Todos los campos deben de estar rellenos.");
