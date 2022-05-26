@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+  <title>Cambiar datos usuario</title>
+    <!-- Ruta relativa del fichero de style (style.css) -->
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="../static/css/cambiar-etiqueta.css">
+    {% endblock %}
+  </head>
+  
+  <body>
+    <div class="parte-central">
+      <div class="titulo">
+          <h1>
+              Cambiar etiqueta
+          </h1>
+      </div>
+
+      <div class="etiquetas">
+        <p>Etiquetas de este producto:</p>
+        {% for i in etiquetas %}
+          <p>* {{ i }}</p>
+        {% endfor %}
+      </div>
+
+      <div class="datos_cambiar">
+        <form action="cambiar-etiqueta.php" method="POST">
+          <div class="cambiar_un_dato"><label for="Nombre">Etiqueta Nueva</label><br>
+          <input type="text" name="EtiquetaVieja" placeholder="Introducir Etiqueta Vieja"/><br>
+
+          <div class="cambiar_un_dato"><label for="Nombre">Etiqueta Vieja</label><br>
+            <input type="text" name="EtiquetaNueva" placeholder="Introducir Etiqueta Nueva"/><br>
+          
+          <div class="boton_cambiar">
+            <input type="submit" value="Cambiar etiqueta" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

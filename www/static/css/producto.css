@@ -1,0 +1,306 @@
+/* Configuración del color de fondo de toda la página */
+body{
+    background-color: rgb(105, 149, 245);
+}
+
+/* Configuración del color de los textos de toda la página */
+a{
+    color: black;
+}
+
+
+
+/* Configuración de la cabecera de la página */
+.header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* Configuración de inicialización de usuarios */
+.usuarios{
+    float:left;
+    width: 101%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+/* Configuración de inicialización de usuarios */
+.texto-usuario{
+    float:left;
+    width: 15%;
+    height: auto;
+    text-align: center;
+}
+
+.tipo-usuario{
+    float:left;
+    width: 20%;
+    height: auto;
+    text-align: center;
+}
+
+.boton-datos{
+    float:right;
+    width: 10%;
+    height: auto;
+    text-align: center;
+    padding-top: 15px;
+}
+
+/* Configuración de inicialización de usuarios */
+.boton-usuario{
+    float:right;
+    width: 10%;
+    height: auto;
+    text-align: center;
+    padding-top: 15px;
+    padding-right: 20px;
+}
+
+.boton-permisos{
+    float:right;
+    width: 10%;
+    height: auto;
+    text-align: center;
+    padding-top: 15px;
+}
+
+/* Configuración del logo de la cabecera */
+.logo{
+    text-align: center;
+    height: auto;
+    width: 40%;
+    padding: 5px;
+}
+
+/* Configuración del contenedor de la cabecera que contiene el título y el menú */
+.container-title-menu{
+    float: left;
+    width: 65%;
+    height: auto;
+    background-color: rgb(201, 245, 230);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+/* Configuración del título del contenedor cabecera */
+.title{
+    font-size: 150%;
+    float: right;
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    color: brown;
+}
+
+/* Configuración del eslogan del contenedor cabecera */
+.slogan{
+    font-size: 150%;
+    float: right;
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    color: brown;
+}
+
+/* Configuración del menú del contenedor cabecera */
+.menu{
+    font-size: 150%;
+    float: right;
+    width: 100%;
+    height: 30%;
+    text-align: center;
+}
+
+/* Configuración del contenedor principal que contiene las fotos y los elementos auxilares */
+.container-principal{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+}
+
+/* Configuración del contenedor que tiene las fotos del contenedor principal */
+.container-producto{
+    text-align: center;
+    width: 70%;
+    height: 100%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: justify;
+    background-color: rgb(201, 245, 230);
+}
+
+/* Configuración del contenedor que contiene todas las partes del producto */
+.todo-producto {
+    float: right;
+    width: 100%;
+    height: 100%;
+}
+
+.subrayar{
+    text-decoration: underline;
+} 
+
+.subrayar-comentario{
+    float: right;
+    width: auto;
+    text-decoration: underline;
+} 
+
+.boton-cambiar{
+    float: right;
+    width: auto;
+    text-decoration: underline;
+}
+
+.nombre{
+    float: right;
+    width: 100%;
+}
+
+
+/* Configuración del texto del producto */
+.texto-producto{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+/* Configuración de las fotos del producto */
+.fotos-producto{
+    float:inherit;
+    width: 50%;
+    height: auto;
+    text-align: center;
+}
+
+.etiquetas{
+    float: right;
+    margin: 10px;
+    width: 100%;
+}
+
+.botones-etiquetas{
+    float: right;
+    width: 100%;
+}
+
+.añadir-etiqueta{
+    float: right;
+    width: 33%;
+}
+
+.cambiar-etiqueta{
+    float: right;
+    width: 33%;
+}
+
+.añadir-etiqueta{
+    float: right;
+    width: 33%;
+}
+ 
+/* Configuración delbotoón que despliega los comentarios */
+.boton-comentarios{
+    float:left;
+    width: auto;
+    height: auto;
+    text-align: center;
+    background-color: rgb(247, 64, 64);
+    border-radius: 20px;
+    margin-left: 45%;
+    padding: 1%;
+    margin-top: 30px;
+}
+
+.boton-subir{
+    margin: 10px;
+}
+
+/* Configuración de la parte que introduce los nuevos comentarios */
+.subir-comentarios{
+    overscroll-behavior-block: contain;
+    float: left;
+    width: 95%;
+    height: auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 20px;
+    display: none;
+}
+
+/* Configuración del contenedor de los comentarios */
+.comentarios{
+    flex-direction: row-reverse;
+}
+
+/* Configuración de los comentarios */
+.comentario{
+    margin-top: 40px;
+}
+
+/* Configuración del lateral que contiene los enlaces de interés del contenedor principal */
+.lateral{
+    float: right;
+    font-size: 150%;
+    width: 25%;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: rgb(201, 245, 230);
+    position: relative;
+}
+
+/* Configuración del título lateral */
+.titulo-lateral {
+    font-size: 125%;
+    text-align: center;
+}
+
+/* Configuración de la foto1 del lateral */
+.foto-lateral1{
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+/* Configuración de la foto2 del lateral */
+.foto-lateral2{
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+/* Configuración de la foto3 del lateral */
+.foto-lateral3{
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+/* Configuración de la foto4 del lateral */
+.foto-lateral4{
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+
+/* Configuración del contenedor que tiene el pie de la página */
+.pie {
+    float: inline-end;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+/* Configuración de los botones sociales */
+.botones-sociales{
+    text-align: center;
+}

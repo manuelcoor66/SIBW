@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <title>Cambiar permisos de usuario</title>
+    <!-- Ruta relativa del fichero de style (style.css) -->
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="../static/css/gestion-permisos.css">
+    {% endblock %}
+  </head>
+  
+  <body>
+    <div class="parte-central">
+      <div class="titulo">
+          <h1>
+              Gestión de permisos
+          </h1>
+      </div>
+
+        <div class="tipos">
+          <p>Tipos:</p>
+          {% for i in tipos %}
+            <p>* {{ i }}</p>
+          {% endfor %}
+        </div>
+
+        <div class="mostrar">
+          <div class="usuarios">
+            <p>Usuarios:</p>
+            {% for i in usuarios %}
+              <p>* {{ i }}</p>
+            {% endfor %}
+          </div>
+
+        <div class="datos_cambiar">
+          <form action="gestion-permisos.php" method="POST">
+            <div class="cambiar_un_dato"><label for="Usuario">Usuario</label><br>
+            <input type="text" name="Usuario" placeholder="Introducir Usuario"/><br>
+  
+            <div class="cambiar_un_dato"><label for="Tipo">Tipo</label><br>
+            <input type="text" name="Tipo" placeholder="Introducir Tipo"/><br>
+          
+            <div class="boton_cambiar">
+              <input type="submit" value="Cambiar" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

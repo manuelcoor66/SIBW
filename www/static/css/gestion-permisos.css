@@ -1,0 +1,51 @@
+/* Configuración del color de fondo de toda la página */
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+/* Configuración del color de los textos de toda la página */
+a{
+    color: rgb(4, 95, 65);
+}
+
+
+/* Configuración del título */
+.titulo{
+    padding-top: 20px;
+    text-align: center;
+    float: right;
+    width: 99%;
+}
+
+.mostrar{
+    height: 100%;
+    width: 100%;
+}
+
+.tipos{
+    float:inline-end;
+    width: 45%;
+}
+
+.usuarios{
+    float:inline-end;
+    width: 10%;
+}
+
+.datos_cambiar{
+    float:right;
+    width: 55.5%;
+    font-size:x-large;
+    padding-top: 20px;
+}
+
+.cambiar_un_dato{
+    margin-top: 10px;
+}
+
+.boton_cambiar{
+    float:right;
+    width: 100%;
+    margin-top: 20px;
+    width: 92%;
+}

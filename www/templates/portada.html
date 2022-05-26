@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+    <head>	
+        <title>Padel Granada Web</title>
+        <!-- Ruta relativa del fichero de style (style.css) -->
+        {% block css %}
+        <link rel="stylesheet" type="text/css" href="../static/css/portada.css">
+        {% endblock %}
+    </head>
+
+    {% block usuarios %}
+    <!-- Bloque pie de usuarios -->
+    <div class="usuarios">
+    	{% if usuario == "" %}
+            <div class="texto-usuario">
+                <p>
+                    No estás logueado.
+                </p>
+            </div>
+            <div class="boton-usuario">        
+                <a href="http://localhost/login.php"><button>Inicia sesión</button></a>
+            </div>
+        {% else %}
+            <div class="texto-usuario">
+                <p>
+                    USUARIO: <strong>{{ usuario }}</strong>
+                </p>
+            </div>
+            
+            <div class="tipo-usuario">
+                {% if tipo == 0 %}
+                    <p>Tipo de usuario: <strong>Superusuario</strong></p>
+                {% endif %}
+                {% if tipo == 1 %}
+                    <p>Tipo de usuario: <strong>Registrado</strong></p>
+                {% endif %}
+                {% if tipo == 2 %}
+                    <p>Tipo de usuario: <strong>Moderador</strong></p>
+                {% endif %}
+                {% if tipo == 3 %}
+                    <p>Tipo de usuario: <strong>Gestor</strong></p>
+                {% endif %}
+            </div>
+            
+            <div class="boton-usuario">        
+                <a href="http://localhost/logout.php"><button>Salir</button></a>
+            </div>
+
+            <div class="boton-datos">        
+                <a href="http://localhost/cambiar-datos.php"><button>Cambiar datos</button></a>
+            </div>
+            {% if tipo == 0 %}
+                <div class="boton-permisos">        
+                    <a href="http://localhost/gestion-permisos.php"><button>Gestión permisos</button></a>
+                </div>
+            {% endif %}
+         {% endif %}
+    </div>
+    <!-- Fin Bloque pie de usuarios -->
+    {% endblock %}
+
+    <body>
+        <!-- Bloque cabecera -->
+        <div class="header"> <!-- Otra opción habría sido poner header -->
+            <!-- Contenedor logo de la cabecera -->
+            <div class="logo">
+                <img src="../images/logo.png"/>
+            <!-- Fin cntenedor logo de la cabecera -->
+            </div>
+
+            <!-- Contenedor title-menu de la cabecera -->
+            <div class="container-title-menu">
+                <!-- Contenedor title de title-menu -->
+                <div class="title">
+                    <h1>Padel Granada</h1>
+                <!-- Fin contenedor title de title-menu -->
+                </div>
+
+                <!-- Contenedor slogan de title-menu -->
+                <div class="slogan">
+                    <h2>Tu tienda de pádel</h2>
+                <!-- Fin contendor slogan de title-menu -->
+                </div>
+                
+                <!-- Contenedor menu de title-menu -->
+                <div class="menu">
+                    <nav>
+                        <a href="http://localhost/"> Página principal</a> |               
+                        <a href="http://localhost/producto.php?id=1"> Hack 03</a> |
+                        <a href="http://localhost/producto-imprimir.php?id=1"> Imprimir</a>
+                    </nav>
+                <!-- Fin contenedor menu de title-menu -->
+                </div>
+            <!-- Fin contenedor title-menu de la cabecera -->
+            </div>
+        <!-- Fin bloque cabecera -->
+        </div>
+    </body>
+
+    <section>
+        <!-- Contenedor principal -->
+        <div class="container-principal">
+    		{% block central %}
+            <!-- Bloque fotos del principal-->
+            <div class="fotos">
+                <!-- Primer contenedor de fotos del principal -->
+                <div class="grupo1">
+                    <!-- Foto número 1 -->
+                    <div class="foto1"> 
+                        <a href="http://localhost/producto.php?id=1"><img src="../images/foto1-texto1.png"/> <p>Bullpadel Hack 03 2022</p></a>
+                    </div>
+                    
+                    <!-- Foto número 2-->
+                    <div class="foto2"> 
+                        <a href="http://localhost/producto.php?id=2"><img src="../images/foto2-texto1.png"/> <p>Adidas Adipower CTRL 1.9</p></a>
+                    </div>
+                    
+                    <!-- Foto número 3-->
+                    <div class="foto3"> 
+                        <a href="http://localhost/producto.php?id=3"><img src="../images/foto3-texto1.png"/> <p>Head Alpha Pro 2022</p></a>
+                    </div> 
+                <!-- Fin primer contenedor de fotos del principal -->  
+                </div>
+
+                <!-- Segundo contenedor de fotos del principal -->
+                <div class="grupo2">
+                    <!-- Foto número 4 -->
+                    <div class="foto4"> 
+                        <a href="http://localhost/producto.php?id=4"><img src="../images/foto4-texto1.png"/> <p>Wilson Bela Pro</p></a>
+                    </div>
+
+                    <!-- Foto número 5 -->
+                    <div class="foto5"> 
+                        <a href="http://localhost/producto.php?id=5"><img src="../images/foto5-texto1.png"/> <p>Babolat Technical Veron 2022</p></a>
+                    </div>
+                    
+                    <!-- Foto número 6 -->
+                    <div class="foto6"> 
+                        <a href="http://localhost/producto.php?id=6"><img src="../images/foto6-texto1.png"/> <p>Adidas Metalbone CTRL 3.1</p></a>
+                    </div>  
+                <!-- Fin segundo contenedor de fotos del principal -->
+                </div>
+
+                <!-- Tercer contenedor de fotos del principal -->
+                <div class="grupo3">
+                    <!-- Foto número 7 -->
+                    <div class="foto7"> 
+                        <a href="http://localhost/producto.php?id=7"><img src="../images/foto7-texto1.png"/> <p>Joma Tournament</p></a>
+                    </div>
+
+                    <!-- Foto número 8 -->
+                    <div class="foto8"> 
+                        <a href="http://localhost/producto.php?id=8"><img src="../images/foto8-texto1.png"/> <p>Head Graphene 360 Delta Hybrid</p></a>
+                    </div>
+
+                    <!-- Foto número 9 -->
+                    <div class="foto9"> 
+                        <a href="http://localhost/producto.php?id=9"><img src="../images/foto9-texto1.png"/> <p>Drop Shot Power 2.0</p></a>
+                    </div>  
+                <!-- Fin segundo contenedor de fotos del principal -->
+                </div>
+            <!-- Fin bloque fotos del principal-->
+            </div>
+            {% endblock %}
+        
+            <!-- Bloque lateral del principal-->
+            <aside class="lateral">
+                <div class="titulo-lateral">
+                    <h1>Enlaces de interés:</h1>
+                </div>
+                <ul>
+                    <!-- Primer enlace lateral -->
+                    <div class="foto-lateral1">
+                        <img src="../images/foto-lateral1.jpg"/>
+                        <li><a href="https://www.padelot.com/blog/mejores-palas-padel-calidad-precio-2022/"> Mejores palas calidad-precio.</a></li>
+                    </div>
+                    <!-- Segundo enlace lateral -->
+                    <div class="foto-lateral2">
+                        <img src="../images/foto-lateral2.jpg"/>
+                        <li><a href="https://www.padeliberico.es/blog-padeliberico/elegir-una-pala-padel-forma-correcta-acierta-comprando/">Como elegir tu pala de padel.</a></li>
+                    </div>
+                    <div class="foto-lateral3">
+                        <img src="../images/foto-lateral3.jpg"/>
+                        <li><a href="https://www.padeladdict.com/alejandro-ruiz-nos-cuenta-como-poner-un-grip/">Como poner el grip de mi pala.</a></li>
+                    </div>
+                    <div class="foto-lateral4">
+                        <img src="../images/foto-lateral4.jpg"/>
+                        <li><a href="http://padelgrip.com/palas-de-padel/palas-de-padel-rugosas/"> ¿Las palas rugosas sirven?</a></li>
+                    </div>
+                </ul>
+            <!-- Fin Bloque lateral -->
+            </aside>
+        <!-- Fin contenedor principal -->
+        </div>
+    </section>
+
+    
+    <!-- Bloque pie de página -->
+    <footer class="pie">
+        <p>
+            @Copyright 2022-Manuel Contreras Orge manuelcoor66@correo.ugr.es
+            {% block pie %}
+            {% endblock %}
+        </p>
+    </footer>
+    <!-- Fin Bloque pie de página -->
+</html>     
