@@ -17,9 +17,14 @@ a{
     width: 95%;
 }
 
-.etiquetas{
-    float: right;
-    width: 55%;
+.mostrar{
+    height: 100%;
+    width: 100%;
+}
+
+.comentarios{
+    float:inline-end;
+    width: 100%;
 }
 
 .datos_cambiar{

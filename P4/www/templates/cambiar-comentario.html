@@ -14,6 +14,15 @@
           </h1>
       </div>
 
+      <div class="mostrar">
+        <div class="comentarios">
+          <p>Comentarios de este producto:</p>
+          {% for i in comentarios %}
+            <p>* {{ i }}</p>
+          {% endfor %}
+        </div>
+      </div>
+
       <div class="datos_cambiar">
         <form action="cambiar-comentario.php" method="POST">
           <div class="cambiar_un_dato"><label for="Nombre">Nuevo Comentario</label><br>

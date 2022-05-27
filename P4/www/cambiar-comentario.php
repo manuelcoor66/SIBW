@@ -8,6 +8,8 @@
   
   session_start();
 
+  $comentarios = getComentarios();
+
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $comentario = $_POST['Comentario'];
 
@@ -28,5 +30,5 @@
     exit();    
   }
 
-  echo $twig->render('cambiar-comentario.html', []);
+  echo $twig->render('cambiar-comentario.html', ['comentarios' => $comentarios]);
 ?>

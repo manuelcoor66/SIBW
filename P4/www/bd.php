@@ -243,4 +243,21 @@
 		$id = $_SESSION['id'];
 		$res = $mysqli->query("UPDATE `Productos` SET `texto_comentario`='$comentario', `edicion`='$cambio' WHERE `id`='$id'");
 	}
+
+	function getComentarios() {
+		$mysqli = connect();
+
+		$id = $_SESSION['id'];
+		$res = $mysqli->query("SELECT `texto_comentario` FROM `Productos` WHERE `id`='$id'");
+		$comentarios=array();
+
+		if ($res->num_rows > 0) {
+			while($row = $res->fetch_assoc()) {
+				$comentarios[] = $row['texto_comentario'];
+			}
+
+		}
+
+		return $comentarios;
+	}
 ?>
