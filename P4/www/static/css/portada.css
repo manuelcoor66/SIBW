@@ -235,6 +235,10 @@ a{
     height: 100%;
 }
 
+.añadir{
+    float: left;
+}
+
 /* Configuración del lateral que contiene los enlaces de interés del contenedor principal*/
 .lateral{
     float: right;

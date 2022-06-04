@@ -25,6 +25,7 @@ a{
 .comentarios{
     float:inline-end;
     width: 100%;
+    color:dimgray;
 }
 
 .datos_cambiar{

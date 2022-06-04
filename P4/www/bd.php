@@ -260,4 +260,34 @@
 
 		return $comentarios;
 	}
+
+	function eliminarProducto() {
+		$mysqli = connect();
+
+		$id = $_SESSION['id'];
+
+		$res = $mysqli->query("DELETE FROM `Productos` WHERE `id`='$id'");
+	}
+
+	function añadirProducto($id, $nombre, $precio, $descripcion, $tipo_jugador, $caracteristicas, $enlace, $foto1, $foto2, $foto3) {
+		$mysqli = connect();
+
+		$res = $mysqli->query("INSERT INTO `Productos`(`id`, `nombre`, `precio`, `descripcion`, `tipo_jugador`, `caracteristicas`, `enlace`, `foto1`, `foto2`, `foto3`) 
+							   VALUES ('$id','$nombre','$precio','$descripcion','$tipo_jugador','$caracteristicas','$enlace','$foto1','$foto2','$foto3')");
+	}
+
+	function sacarIdMax() {
+		$mysqli = connect();
+
+		$res = $mysqli->query("SELECT MAX(`id`)+1 FROM `Productos`");
+		$salida = array('id' => 'id por defecto');
+		
+		if ($res->num_rows > 0) {
+			$row = $res->fetch_assoc();
+
+			$salida = array('id' => $row['MAX(`id`)+1']);
+		}
+
+		return $total;
+	}
 ?>

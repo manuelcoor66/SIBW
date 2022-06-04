@@ -158,6 +158,13 @@
                     </div>  
                 <!-- Fin segundo contenedor de fotos del principal -->
                 </div>
+                <div class="añadir">
+                    {% if usuario %}
+                        {% if (tipo == 0) or (tipo == 2) %}	
+                            <a href="http://localhost/añadir-producto.php"><button>Añadir producto</button></a> 
+                        {% endif %}
+                    {% endif %}
+                </div>
             <!-- Fin bloque fotos del principal-->
             </div>
             {% endblock %}

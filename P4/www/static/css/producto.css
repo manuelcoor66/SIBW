@@ -160,6 +160,10 @@ a{
     height: 100%;
 }
 
+.eliminar-producto{
+    margin-top: 20px;
+}
+
 /* Configuración de las fotos del producto */
 .fotos-producto{
     float:inherit;

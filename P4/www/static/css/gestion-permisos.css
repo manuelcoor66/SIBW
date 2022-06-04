@@ -25,11 +25,13 @@ a{
 .tipos{
     float:inline-end;
     width: 45%;
+    color:dimgray;
 }
 
 .usuarios{
     float:inline-end;
     width: 10%;
+    color:dimgray;
 }
 
 .datos_cambiar{
@@ -48,4 +50,11 @@ a{
     width: 100%;
     margin-top: 20px;
     width: 92%;
+}
+
+.leyenda{
+    float:inline-end;
+    width: 65%;
+    color:dimgray;
+    font-size: small;
 }

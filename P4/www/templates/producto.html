@@ -74,7 +74,15 @@
 				Características:
 			</h2>
 			<p>{{ pala['caracteristicas'] }}</p>  
-			<a href="{{ pala['enlace'] }}">Pulse aquí para obtener más información.</a>          
+			<a href="{{ pala['enlace'] }}">Pulse aquí para obtener más información.</a> 
+			
+			<div class="eliminar-producto">
+				{% if usuario %}
+					{% if (tipo == 0) or (tipo == 2) %}	
+							<a href="http://localhost/eliminar-producto.php"><button>Eliminar producto</button></a> 
+					{% endif %}
+				{% endif %}
+			</div>
 		</div>
 		
 		<div class="fotos-producto">

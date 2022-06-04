@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+  <title>Cambiar datos usuario</title>
+    <!-- Ruta relativa del fichero de style (style.css) -->
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="../static/css/añadir-producto.css">
+    {% endblock %}
+  </head>
+  
+  <body>
+    <div class="parte-central">
+      <div class="titulo">
+          <h1>
+              Añadir producto
+          </h1>
+      </div>
+
+      <div class="datos_añadir">
+        <form action="añadir-producto.php" method="POST">
+          <div class="añadir_un_dato"><label for="Nombre">Nombre</label><br>
+          <input type="text" name="Nombre" placeholder="Introducir Nombre"/><br>
+          
+          <div class="añadir_un_dato"><label for="Precio">Precio</label><br>
+          <input type="text" name="Precio" placeholder="Introducir Precio"/><br>
+          
+          <div class="añadir_un_dato"><label for="Descripcion">Descripcion</label><br>
+          <input type="text" name="Descripcion" placeholder="Introducir Descripcion"/><br>
+
+          <div class="añadir_un_dato"><label for="TipoJugador">Tipo Jugador</label><br>
+          <input type="text" name="TipoJugador" placeholder="Introducir Tipo Jugador"/><br>
+
+          <div class="añadir_un_dato"><label for="Caracteristicas">Caracteristicas</label><br>
+          <input type="text" name="Caracteristicas" placeholder="Introducir Caracteristicas"/><br>
+
+          <div class="añadir_un_dato"><label for="Enlace">Enlace</label><br>
+          <input type="text" name="Enlace" placeholder="Introducir Enlace"/><br>
+          
+          <div class="añadir_un_dato"><label for="Foto1">Foto1</label><br>
+          <input type="text" name="Foto1" placeholder="Introducir Foto1"/><br>
+            
+          <div class="añadir_un_dato"><label for="Foto2">Foto2</label><br>
+          <input type="text" name="Foto2" placeholder="Introducir Foto2"/><br>
+            
+          <div class="añadir_un_dato"><label for="Foto3">Foto3</label><br>
+          <input type="text" name="Foto3" placeholder="Introducir Foto3"/><br>
+            
+          <div class="boton_añadir">
+            <input type="submit" value="Añadir producto" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
